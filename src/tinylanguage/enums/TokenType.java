@@ -21,7 +21,10 @@ public enum TokenType {
     SEMICOLON(";"),
     SLASH("/"),
     STAR("*"),
+    POW("^"),
     EQUAL("="),
+    LARGER(">"),
+    LESS("<"),
     //
     IDENTIFIER("ID"), NUMBER("NUMBER"),
     IF("if"),
@@ -58,7 +61,16 @@ public enum TokenType {
     }
 
     public static boolean isBreakCharacter(String c){
-        List<String> breaks=  Arrays.asList(RIGHT_PAREN.getValue(),MINUS.getValue(),PLUS.getValue(),SEMICOLON.getValue(),SLASH.getValue(),STAR.getValue(),EQUAL.getValue());
+        List<String> breaks=  Arrays.asList(
+                LEFT_PAREN.getValue(), RIGHT_PAREN.getValue(),
+                MINUS.getValue(),PLUS.getValue(),SEMICOLON.getValue(),
+                SLASH.getValue(),STAR.getValue(),
+                POW.getValue(),
+                
+                EQUAL.getValue(),
+                LARGER.getValue(),
+                LESS.getValue()
+        );
         return breaks.contains(c);
     }
 }

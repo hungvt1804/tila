@@ -24,8 +24,6 @@ public class TinyLanguage {
      */
     public static void main(String[] args) {
         try {
-            args = new String[1];
-            args[0] = "E:\\Work\\Java\\tinylanguage\\example.tila";
             // TODO code application logic here
             if (args.length == 1) {
                 String file = args[0];

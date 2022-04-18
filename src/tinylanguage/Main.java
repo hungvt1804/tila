@@ -59,10 +59,10 @@ public class Main {
 //                    String result = interpreter.interpret(expr);
 //                    System.out.println(result);
             Stmt s = parser.parse();
-//            if (s instanceof Program) {
-//                ((Program) s).print();
-//            }
-            System.out.println(new AstPrinter().print(s));
+            if (s instanceof Program) {
+                ((Program) s).print();
+            }
+//            System.out.println(new AstPrinter().print(s));
         } else {
             System.out.println("File input must be *.tila");
         }

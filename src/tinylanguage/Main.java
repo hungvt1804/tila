@@ -25,8 +25,8 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            args = new String[1];
-            args[0] = "E:\\Work\\Java\\TinyLanguage\\example\\full.tila";
+//            args = new String[1];
+//            args[0] = "E:\\Work\\Java\\TinyLanguage\\example\\full.tila";
             String path = "";
             if (args.length == 1) {
                 path = args[0];

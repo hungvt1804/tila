@@ -1,0 +1,7 @@
+begin
+int a;
+while (a) do
+    begin
+        a = a - 1;
+    end;
+end

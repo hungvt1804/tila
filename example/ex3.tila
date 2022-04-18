@@ -1,0 +1,9 @@
+begin
+int a = 1;
+while(a>1)
+	do
+	begin
+		a = a-1;
+	end
+print a;
+end

@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tinylanguage.enums.TokenType;
-import tokens.IdToken;
+import tinylanguage.tokens.IdToken;
 
 /**
  *
@@ -25,8 +25,11 @@ public class TinyLanguage {
     public static void main(String[] args) {
         try {
             // TODO code application logic here
+            args = new String[1];
+            args[0] = "E:\\Work\\Java\\tinylanguage\\example\\ex1.tila";
             if (args.length == 1) {
                 String file = args[0];
+                
                 File f = new File(file);
                 if(f.exists() && file.endsWith("tila")){
                     runFile(file);
@@ -38,19 +41,24 @@ public class TinyLanguage {
                 System.out.println("Wrong parameter, please input *.tila");
             }
 
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
-
-    public static void runFile(String path) throws IOException {
+    
+    public static String getContentSource(String path)throws IOException, Exception {
+        byte[] bytes = Files.readAllBytes(Paths.get(path));
+        return new String(bytes);
+    }
+    public static void runFile(String path) throws IOException, Exception {
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         run(new String(bytes));
     }
 
-    public static void run(String source) {
+    public static void run(String source) throws Exception {
         Scanner scanner = new Scanner(source);
         scanner.print();
     }
+    
 
 }

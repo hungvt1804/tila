@@ -1,0 +1,5 @@
+begin
+int a;
+int b = 1
+print a
+end

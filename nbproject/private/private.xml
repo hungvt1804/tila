@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/Assigment.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/README.md</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/While.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/Program.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/IntDeclare.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/exceptions/ParseException.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/Print.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/Main.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/example/tc5.while.tila</file>
+            <file>file:/D:/Work/Java/TinyLanguage/example/tc1.1.bien_trung_tu_khoa.tila</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/ExpressionStatement.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/example/tc7.while_thieu_semicolon.tila</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/parser/Parser.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/statements/Statements.java</file>
+            <file>file:/D:/Work/Java/TinyLanguage/example/tc6.tinh_toan.tila</file>
+            <file>file:/D:/Work/Java/TinyLanguage/src/tinylanguage/Scanner.java</file>
+        </group>
+    </open-files>
+</project-private>

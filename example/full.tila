@@ -1,0 +1,7 @@
+begin
+int a;
+int b = 1;
+a = 1;
+int c = a - b;
+print a;
+end

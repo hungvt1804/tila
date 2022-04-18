@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import tinylanguage.enums.TokenType;
-import tokens.BaseToken;
-import tokens.TokenProvider;
+import tinylanguage.tokens.BaseToken;
+import tinylanguage.tokens.TokenProvider;
 
 /**
  *
@@ -22,14 +22,14 @@ public class Scanner {
     private int start = 0;
     private int current = 0;
     private int currentLine = 1;
-    private final List<Object> whiteSpaces = Arrays.asList(' ','\t','\r');
+    private final List<Object> whiteSpaces = Arrays.asList(' ','\n','\t','\r');
     private final List<BaseToken> tokens = new ArrayList<>();
     public Scanner(String source){
         this.source = source;
         this.sourceLength = source.length();
     }
    
-    public List<BaseToken> scanTokens(){
+    public List<BaseToken> scanTokens() throws Exception{
         while(!isEndSource()){
             start = current;
             scanToken();
@@ -37,7 +37,7 @@ public class Scanner {
         addTokenEOF();
         return tokens;
     }
-    private void scanToken(){
+    private void scanToken() throws Exception{
         char currentChar = currentChar();
         if(isNewLine(currentChar)){
             currentLine ++;
@@ -53,6 +53,9 @@ public class Scanner {
             if(token!=null){
                 tokens.add(token);
             }
+            else{
+                throw new Exception(String.format("Error character \"%s\" in \"%s\", Line: %s", String.valueOf(currentChar), text, currentLine ));
+            }
         }
     }
     private String getCurrentString(char c){
@@ -65,6 +68,9 @@ public class Scanner {
         }
         if(result.length()>0 && isEndCommand(c)){
             current--;
+        }
+        if(isNewLine(c)){
+            currentLine++;
         }
         return result.toString();
     }
@@ -87,7 +93,7 @@ public class Scanner {
         return current>=sourceLength;
     }
 
-    public void print(){
+    public void print() throws Exception{
         this.scanTokens();
         StringBuilder result = new StringBuilder();
         for (BaseToken token : this.tokens) {

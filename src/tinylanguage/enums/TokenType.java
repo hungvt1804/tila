@@ -17,7 +17,6 @@ public enum TokenType {
     LEFT_PAREN("("),
     RIGHT_PAREN(")"),
     MINUS("-"),
-    PLUS("+"),
     SEMICOLON(";"),
     SLASH("/"),
     STAR("*"),
@@ -33,6 +32,7 @@ public enum TokenType {
     END("end"),
     WHILE("while"),
     DO("do"),
+    PRINT("print"),
     EOF("eof"),
     
     INT("int");
@@ -63,7 +63,9 @@ public enum TokenType {
     public static boolean isBreakCharacter(String c){
         List<String> breaks=  Arrays.asList(
                 LEFT_PAREN.getValue(), RIGHT_PAREN.getValue(),
-                MINUS.getValue(),PLUS.getValue(),SEMICOLON.getValue(),
+                MINUS.getValue(),
+                
+                SEMICOLON.getValue(),
                 SLASH.getValue(),STAR.getValue(),
                 POW.getValue(),
                 
